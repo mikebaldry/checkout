@@ -2,11 +2,11 @@
 
 For an online marketplace, here is a sample of some of the products available:
 
-| Product code | Name | Price |
-| ------------ | ---- | ----- |
-| 001 | Silver Earrings | £9.25 |
-| 002 | Dove Dress in Bamboo | £45.00 |
-| 003 | Autumn Floral Shirt | £19.95 |
+| Product code | Name                 | Price  |
+| ------------ | -------------------- | ------ |
+| 001          | Silver Earrings      | £9.25  |
+| 002          | Dove Dress in Bamboo | £45.00 |
+| 003          | Autumn Floral Shirt  | £19.95 |
 
 The marketing team want to offer promotions as an incentive for our customers to purchase these items.
 
@@ -28,11 +28,11 @@ Implement a checkout system that fulfills these requirements.
 
 ## Test data
 
-| Basket products | Total expected |
-| --------------- | -------------- |
-| 001, 002, 003 | £66.78 |
-| 001, 003, 001 | £36.95 |
-| 001, 002, 001, 003 | £73.76 |
+| products           | Total expected |
+| ------------------ | -------------- |
+| 001, 002, 003      | £66.78         |
+| 001, 003, 001      | £36.95         |
+| 001, 002, 001, 003 | £73.76         |
 
 
 ## Running

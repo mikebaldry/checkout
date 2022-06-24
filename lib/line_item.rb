@@ -1,4 +1,4 @@
-class BasketProduct
+class LineItem
   include Comparable
 
   attr_reader :quantity
@@ -14,7 +14,7 @@ class BasketProduct
   end
 
   def price
-    @product.price - @discount
+    @product.price + @discount
   end
 
   def sub_total
@@ -22,10 +22,10 @@ class BasketProduct
   end
 
   def discounted_by(amount)
-    BasketProduct.new(
+    LineItem.new(
       product: @product,
       quantity: @quantity,
-      discount: @discount + amount
+      discount: @discount - amount
     )
   end
 

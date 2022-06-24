@@ -1,4 +1,4 @@
-RSpec.describe BasketProduct do
+RSpec.describe LineItem do
   let(:product) { Product.new(code: 'A', price: 15) }
 
   subject { described_class.new(product: product, quantity: 2) }
@@ -24,7 +24,7 @@ RSpec.describe BasketProduct do
   end
 
   describe '#discounted_by' do
-    it 'returns another BasketProduct with a discount amount applied' do
+    it 'returns another LineItem with a discount amount applied' do
       expect(subject.discounted_by(1).price).to eq(14)
       expect(subject.discounted_by(5).price).to eq(10)
     end

@@ -5,11 +5,11 @@ module Rules
       @discount = discount_percentage / 100.0
     end
 
-    def apply(basket)
-      total = basket.sum(&:sub_total)
-      return basket if total < @minimum_total
+    def apply(line_items)
+      total = line_items.sum(&:sub_total)
+      return line_items if total < @minimum_total
 
-      basket.map do |product|
+      line_items.map do |product|
         product.discounted_by(product.price * @discount)
       end
     end

@@ -6,8 +6,8 @@ module Rules
       @price = price
     end
 
-    def apply(basket)
-      basket.map do |product|
+    def apply(line_items)
+      line_items.map do |product|
         next product if product.code != @product_code || product.quantity < @minimum_quantity
 
         product.discounted_by(product.price - @price)

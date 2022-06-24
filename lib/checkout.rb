@@ -9,25 +9,25 @@ class Checkout
   end
 
   def total
-    discounted_basket
+    discounted_line_items
       .sum(&:sub_total)
       .round(2)
   end
 
   private
 
-  def discounted_basket
-    @rules.reduce(basket) do |basket, rule|
-      rule.apply(basket)
+  def discounted_line_items
+    @rules.reduce(line_items) do |line_items, rule|
+      rule.apply(line_items)
     end
   end
 
-  def basket
+  def line_items
     @products.
       group_by(&:itself).
       transform_values(&:count).
       map do |product, quantity|
-        BasketProduct.new(product: product, quantity: quantity)
+        LineItem.new(product: product, quantity: quantity)
       end
   end
 end
