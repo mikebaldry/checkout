@@ -39,5 +39,5 @@ Implement a checkout system that fulfills these requirements.
 
 This project uses bundler and includes `.ruby-version`/`.tool-versions` to allow version managers to pick the right version.
 
-Run `bundle install` to install the necessary gems
-Run `bundle exec rspec` to run the tests
+- Run `bundle install` to install the necessary gems
+- Run `bundle exec rspec` to run the tests
